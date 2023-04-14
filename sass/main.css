@@ -1,23 +1,40 @@
 #layout_switch {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  left: 25px;
+  left: 20px;
   top: 20px;
   z-index: 100;
+  width: 180px;
+  height: 70px;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.3);
+  border-radius: 5px;
 }
-
 #layout_switch button {
-  display: block;
-  color: #fff;
-  background: #ff4757;
-  font-size: 110%;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  margin-bottom: 10px;
-  border: 2px solid #E23140;
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(255, 71, 86, 0.6);
-          box-shadow: 0px 4px 10px 0px rgba(255, 71, 86, 0.6);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
   cursor: pointer;
+  border: none;
+}
+#layout_switch button .icon {
+  width: 30px;
+  height: 30px;
+  fill: #737373;
+}
+#layout_switch button.active {
+  box-shadow: inset 0px 2px 4px 0px rgba(128, 128, 128, 0.7);
 }
 
 #article #or-contact {
@@ -28,8 +45,7 @@
   background: #FFFFFF;
   font-size: 16px;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -41,54 +57,45 @@
   width: 1035px;
 }
 
-.mobile #article #or-contact .lp-container {
+.mobile #article #or-contact,
+.lp-container {
   max-width: 100%;
 }
 
 #or-contact {
   display: block;
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #212121;
 }
-
 #or-contact.blank p {
   margin-top: 0;
 }
-
 #or-contact h1, #or-contact h2, #or-contact h3, #or-contact h4, #or-contact p, #or-contact ul, #or-contact ol, #or-contact li, #or-contact figure {
   margin: 0;
   padding: 0;
 }
-
 #or-contact input, #or-contact button, #or-contact textarea, #or-contact select {
   font: inherit;
 }
-
 #or-contact ul, #or-contact ol {
   list-style: none;
 }
-
 #or-contact .hidden {
   display: none;
 }
-
 #or-contact a {
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-
 #or-contact .hdng2 {
   font-size: 30px;
   line-height: 37.5px;
   font-weight: 700;
   color: #00275b;
 }
-
 #or-contact .alza-btn {
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   height: 42px;
   line-height: 42px;
   font-size: 14px;
@@ -97,348 +104,235 @@
   text-decoration: none;
   font-weight: 500;
   border: none;
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   cursor: pointer;
   padding: 0 15px;
 }
-
-#or-contact .alza-btn__blue {
+#or-contact .alza-btn--blue {
   background-color: #0094e7;
   color: #ffffff;
 }
-
-#or-contact .alza-btn__blue:hover {
-  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+#or-contact .alza-btn--blue:hover {
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
-#or-contact .alza-btn__blue:active {
+#or-contact .alza-btn--blue:active {
   background-color: #006daa;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
-#or-contact .alza-btn__blue__disabled {
+#or-contact .alza-btn--blue--disabled {
   background-color: rgba(0, 148, 231, 0.5);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
-#or-contact .alza-btn__white {
+#or-contact .alza-btn--white {
   background-color: #ffffff;
   color: #212121;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
   gap: 15px;
 }
-
-#or-contact .alza-btn__white:hover {
-  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+#or-contact .alza-btn--white:hover {
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
-#or-contact .alza-btn__white:active {
+#or-contact .alza-btn--white:active {
   background-color: #e0e0e0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
-#or-contact .alza-btn__white__disabled {
+#or-contact .alza-btn--white--disabled {
   background-color: rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
-#or-contact .at-btns--row {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#or-contact .at-btns__row {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   gap: 24px;
 }
-
-#or-contact .at-btns--row a p span {
+#or-contact .at-btns__row a p span {
   color: #0094e7;
 }
-
-#or-contact .at-btns--caption {
+#or-contact .at-btns__caption {
   margin-bottom: 10px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
 }
-
-#or-contact .at-btn--img {
+#or-contact .at-btn__img {
   width: 22px;
   height: 22px;
 }
-
 #or-contact .alza-imagebox {
   background-color: #ffffff;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
   width: 600px;
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-
 #or-contact .alza-imagebox:hover {
-  -webkit-box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.2);
 }
-
-#or-contact .alza-imagebox--column:first-of-type {
+#or-contact .alza-imagebox__column:first-of-type {
   padding: 36px;
   max-width: 50%;
 }
-
-#or-contact .alza-imagebox--column:last-of-type {
-  background-image: url("https://i.alza.cz/Foto/or/articles/25185/img/map.png");
+#or-contact .alza-imagebox__column:last-of-type {
+  background-image: url("https://cdn.alza.cz/Foto/or/articles/25185/img/map.png");
   background-size: cover;
   background-position: center;
   border-radius: 0 4px 4px 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+  flex: 1 1 0;
   max-width: 50%;
   width: auto;
   height: 300px;
 }
-
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min--moz-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  #or-contact .alza-imagebox--column:last-of-type {
-    background-image: url("https://i.alza.cz/Foto/or/articles/25185/img/map.png");
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  #or-contact .alza-imagebox__column:last-of-type {
+    background-image: url("https://cdn.alza.cz/Foto/or/articles/25185/img/map.png");
   }
 }
-
-#or-contact .alza-imagebox--heading {
+#or-contact .alza-imagebox__heading {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
   margin-bottom: 18px;
 }
-
-#or-contact .alza-imagebox--text {
+#or-contact .alza-imagebox__text {
   margin-bottom: 18px;
 }
-
-#or-contact .alza-imagebox--text p {
+#or-contact .alza-imagebox__text p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
-
 #or-contact .alza-infobox {
   text-align: center;
   background-color: #ffffff;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
   text-decoration: none;
   color: #212121;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   transition: all 200ms ease-in-out;
 }
-
-#or-contact .alza-infobox--row {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#or-contact .alza-infobox__row {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
   gap: 20px;
 }
-
-#or-contact .alza-infobox--heading {
+#or-contact .alza-infobox__heading {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
   margin: 0 24px;
 }
-
-#or-contact .alza-infobox--text {
+#or-contact .alza-infobox__text {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
   margin: 0 24px;
 }
-
-#or-contact .alza-infobox--img {
+#or-contact .alza-infobox__img {
   width: 64px;
   height: 64px;
   margin-bottom: 24px;
 }
-
 #or-contact .at-header {
   background-color: #f8f8f8;
   padding: 48px 65px;
 }
-
 #or-contact .at-header .hdng2 {
   text-align: center;
   padding-bottom: 36px;
 }
-
 #or-contact .at-header .alza-infobox {
-  width: calc(100% - 20px * (5 - 1) / 5);
+  width: calc(100% - 16px);
   height: 190px;
 }
-
 #or-contact .at-header .alza-infobox:hover {
-  -webkit-box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-
 #or-contact .at-kontakt {
   padding: 48px 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 36px;
 }
-
 #or-contact .at-kontakt .hdng2 {
   text-align: left;
   margin-bottom: 14px;
 }
-
-#or-contact .at-kontakt--mail a, #or-contact .at-kontakt--note a {
+#or-contact .at-kontakt__mail a, #or-contact .at-kontakt__note a {
   color: #0094e7;
 }
-
-#or-contact .at-kontakt--mail a:hover, #or-contact .at-kontakt--note a:hover {
+#or-contact .at-kontakt__mail a:hover, #or-contact .at-kontakt__note a:hover {
   color: #00275b;
 }
-
-#or-contact .at-kontakt--mail {
+#or-contact .at-kontakt__mail {
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
 }
-
-#or-contact .at-kontakt--note p {
+#or-contact .at-kontakt__note p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
-
-#or-contact .at-kontakt .at-btns--row .alza-btn p {
+#or-contact .at-kontakt .at-btns__row .alza-btn p {
   font-size: 14px;
   line-height: 19px;
   text-align: left;
 }
-
 #or-contact .at-offer {
   background-color: #f8f8f8;
   padding: 48px 165px;
 }
-
 #or-contact .at-offer .hdng2 {
   text-align: center;
   padding-bottom: 36px;
 }
-
 #or-contact .at-offer .alza-infobox {
-  width: calc(100% - 20px * (4 - 1) / 4);
+  width: calc(100% - 15px);
   height: 210px;
-  cursor: default;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
-
-#or-contact .at-offer .alza-infobox--img {
+#or-contact .at-offer .alza-infobox__img {
   margin-top: 48px;
 }
 
-.layout-0 #or-contact .at-kontakt .at-btns--row {
+.layout-0 #or-contact .at-kontakt .at-btns__row {
   gap: 16px;
 }
-
 .layout-0 #or-contact .at-kontakt .at-btns .alza-btn {
   text-align: left;
   height: 60px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+  flex: 1 1 0;
 }
-
-.layout-0 #or-contact .at-kontakt .at-btns .at-btn--img {
+.layout-0 #or-contact .at-kontakt .at-btns .at-btn__img {
   width: 32px;
   height: 32px;
 }
-
 .layout-0 #or-contact .at-offer {
   padding: 48px 65px;
 }
 
 @media only screen and (max-width: 1260px) {
-  .mobile #or-contact .at-kontakt .at-btns--row,
-  .mobileapp #or-contact .at-kontakt .at-btns--row {
+  .mobile #or-contact .at-kontakt .at-btns__row,
+  .mobileapp #or-contact .at-kontakt .at-btns__row {
     gap: 16px;
   }
   .mobile #or-contact .at-kontakt .at-btns .alza-btn,
@@ -446,111 +340,87 @@
     line-height: 19px;
     text-align: left;
     height: 60px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 0px;
-            flex: 1 1 0;
+    flex: 1 1 0;
   }
   .mobile #or-contact .at-offer,
   .mobileapp #or-contact .at-offer {
     padding: 48px 65px;
   }
 }
-
 @media only screen and (max-width: 930px) {
   .mobile #or-contact .at-header .alza-infobox,
   .mobileapp #or-contact .at-header .alza-infobox {
-    width: calc((100% - 20px * (3 - 1)) / 3);
+    width: calc((100% - 40px) / 3);
   }
-  .mobile #or-contact .at-header .alza-infobox--row,
-  .mobileapp #or-contact .at-header .alza-infobox--row {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+  .mobile #or-contact .at-header .alza-infobox__row,
+  .mobileapp #or-contact .at-header .alza-infobox__row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   .mobile #or-contact .at-kontakt .alza-imagebox,
   .mobileapp #or-contact .at-kontakt .alza-imagebox {
     width: 100%;
   }
-  .mobile #or-contact .at-kontakt .at-btns--row,
-  .mobileapp #or-contact .at-kontakt .at-btns--row {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .mobile #or-contact .at-kontakt .at-btns__row,
+  .mobileapp #or-contact .at-kontakt .at-btns__row {
+    flex-wrap: wrap;
   }
-  .mobile #or-contact .at-kontakt .at-btns--row .alza-btn,
-  .mobileapp #or-contact .at-kontakt .at-btns--row .alza-btn {
-    -webkit-box-flex: 43%;
-        -ms-flex: 43% 1 0px;
-            flex: 43% 1 0;
+  .mobile #or-contact .at-kontakt .at-btns__row .alza-btn,
+  .mobileapp #or-contact .at-kontakt .at-btns__row .alza-btn {
+    flex: 43% 1 0;
   }
   .mobile #or-contact .at-offer .alza-infobox,
   .mobileapp #or-contact .at-offer .alza-infobox {
     height: 240px;
   }
 }
-
 @media only screen and (max-width: 810px) {
   .mobile #or-contact .at-offer .alza-infobox,
   .mobileapp #or-contact .at-offer .alza-infobox {
-    -webkit-box-flex: 48%;
-        -ms-flex: 48% 1 0px;
-            flex: 48% 1 0;
+    flex: 48% 1 0;
     height: 210px;
   }
-  .mobile #or-contact .at-offer .alza-infobox--row,
-  .mobileapp #or-contact .at-offer .alza-infobox--row {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .mobile #or-contact .at-offer .alza-infobox__row,
+  .mobileapp #or-contact .at-offer .alza-infobox__row {
+    flex-wrap: wrap;
   }
 }
-
 @media only screen and (max-width: 732px) {
-  .mobile #or-contact .at-kontakt .at-btns--row .at-btn--img,
-  .mobileapp #or-contact .at-kontakt .at-btns--row .at-btn--img {
+  .mobile #or-contact .at-kontakt .at-btns__row .at-btn__img,
+  .mobileapp #or-contact .at-kontakt .at-btns__row .at-btn__img {
     width: 22px;
     height: 22px;
   }
-  .mobile #or-contact .at-kontakt .at-btns--row .alza-btn,
-  .mobileapp #or-contact .at-kontakt .at-btns--row .alza-btn {
-    -webkit-box-flex: 40%;
-        -ms-flex: 40% 1 0px;
-            flex: 40% 1 0;
+  .mobile #or-contact .at-kontakt .at-btns__row .alza-btn,
+  .mobileapp #or-contact .at-kontakt .at-btns__row .alza-btn {
+    flex: 40% 1 0;
   }
   .mobile #or-contact .at-kontakt .alza-imagebox,
   .mobileapp #or-contact .at-kontakt .alza-imagebox {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
-  .mobile #or-contact .at-kontakt .alza-imagebox--column,
-  .mobileapp #or-contact .at-kontakt .alza-imagebox--column {
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
+  .mobile #or-contact .at-kontakt .alza-imagebox__column,
+  .mobileapp #or-contact .at-kontakt .alza-imagebox__column {
+    flex: none;
     width: 100%;
     max-width: 100%;
   }
-  .mobile #or-contact .at-kontakt .alza-imagebox--heading, .mobile #or-contact .at-kontakt .alza-imagebox--text, .mobile #or-contact .at-kontakt .alza-imagebox .alza-btn,
-  .mobileapp #or-contact .at-kontakt .alza-imagebox--heading,
-  .mobileapp #or-contact .at-kontakt .alza-imagebox--text,
+  .mobile #or-contact .at-kontakt .alza-imagebox__heading, .mobile #or-contact .at-kontakt .alza-imagebox__text, .mobile #or-contact .at-kontakt .alza-imagebox .alza-btn,
+  .mobileapp #or-contact .at-kontakt .alza-imagebox__heading,
+  .mobileapp #or-contact .at-kontakt .alza-imagebox__text,
   .mobileapp #or-contact .at-kontakt .alza-imagebox .alza-btn {
     margin-right: 36px;
     margin-left: 36px;
   }
   .mobile #or-contact .at-header .alza-infobox,
   .mobileapp #or-contact .at-header .alza-infobox {
-    width: calc((100% - 20px * (2 - 1)) / 2);
+    width: calc((100% - 20px) / 2);
   }
   .mobile #or-contact .at-offer .alza-infobox,
   .mobileapp #or-contact .at-offer .alza-infobox {
-    -webkit-box-flex: 47%;
-        -ms-flex: 47% 1 0px;
-            flex: 47% 1 0;
+    flex: 47% 1 0;
   }
 }
-
 @media only screen and (max-width: 520px) {
   .mobile #or-contact .at-kontakt, .mobile #or-contact .at-header, .mobile #or-contact .at-offer,
   .mobileapp #or-contact .at-kontakt,
@@ -558,15 +428,12 @@
   .mobileapp #or-contact .at-offer {
     padding: 48px 25px;
   }
-  .mobile #or-contact .at-kontakt .at-btns--row .alza-btn,
-  .mobileapp #or-contact .at-kontakt .at-btns--row .alza-btn {
-    -webkit-box-flex: 42%;
-        -ms-flex: 42% 1 0px;
-            flex: 42% 1 0;
+  .mobile #or-contact .at-kontakt .at-btns__row .alza-btn,
+  .mobileapp #or-contact .at-kontakt .at-btns__row .alza-btn {
+    flex: 42% 1 0;
   }
 }
-
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 455px) {
   .mobile #or-contact .at-kontakt, .mobile #or-contact .at-header, .mobile #or-contact .at-offer,
   .mobileapp #or-contact .at-kontakt,
   .mobileapp #or-contact .at-header,
@@ -577,40 +444,39 @@
   .mobileapp #or-contact .at-header .alza-infobox,
   .mobileapp #or-contact .at-offer .alza-infobox {
     width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
     height: 62px;
     padding: 0 15px;
     gap: 15px;
   }
-  .mobile #or-contact .at-header .alza-infobox--img, .mobile #or-contact .at-offer .alza-infobox--img,
-  .mobileapp #or-contact .at-header .alza-infobox--img,
-  .mobileapp #or-contact .at-offer .alza-infobox--img {
+  .mobile #or-contact .at-header .alza-infobox__img, .mobile #or-contact .at-offer .alza-infobox__img,
+  .mobileapp #or-contact .at-header .alza-infobox__img,
+  .mobileapp #or-contact .at-offer .alza-infobox__img {
     width: 32px;
     height: 32px;
     margin-bottom: 0;
     margin-top: 0;
   }
-  .mobile #or-contact .at-header .alza-infobox--heading, .mobile #or-contact .at-offer .alza-infobox--heading,
-  .mobileapp #or-contact .at-header .alza-infobox--heading,
-  .mobileapp #or-contact .at-offer .alza-infobox--heading {
+  .mobile #or-contact .at-header .alza-infobox__heading, .mobile #or-contact .at-offer .alza-infobox__heading,
+  .mobileapp #or-contact .at-header .alza-infobox__heading,
+  .mobileapp #or-contact .at-offer .alza-infobox__heading {
     margin: 0;
     text-align: left;
   }
-  .mobile #or-contact .at-header .alza-infobox--row, .mobile #or-contact .at-offer .alza-infobox--row,
-  .mobileapp #or-contact .at-header .alza-infobox--row,
-  .mobileapp #or-contact .at-offer .alza-infobox--row {
+  .mobile #or-contact .at-header .alza-infobox__row, .mobile #or-contact .at-offer .alza-infobox__row,
+  .mobileapp #or-contact .at-header .alza-infobox__row,
+  .mobileapp #or-contact .at-offer .alza-infobox__row {
     gap: 16px;
   }
-  .mobile #or-contact .at-kontakt .at-btns--row .alza-btn,
-  .mobileapp #or-contact .at-kontakt .at-btns--row .alza-btn {
-    -webkit-box-flex: calc(100% - 30px);
-        -ms-flex: calc(100% - 30px) 1 0px;
-            flex: calc(100% - 30px) 1 0;
+  .mobile #or-contact .at-kontakt .at-btns__row .alza-btn,
+  .mobileapp #or-contact .at-kontakt .at-btns__row .alza-btn {
+    flex: calc(100% - 30px) 1 0;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .mobile #or-contact .at-offer .alza-infobox,
+  .mobileapp #or-contact .at-offer .alza-infobox {
+    height: 80px;
   }
 }
